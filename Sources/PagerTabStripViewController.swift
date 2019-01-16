@@ -65,11 +65,6 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
     open var pageWidth: CGFloat {
         return containerView.bounds.width
     }
-    
-    open var bounceScroll: Bool {
-        return true
-    }
-    
 
     open var scrollPercentage: CGFloat {
         if swipeDirection != .right {
@@ -99,8 +94,8 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
         if containerView.superview == nil {
             view.addSubview(containerView)
         }
-        containerView.bounces = bounceScroll
-        containerView.alwaysBounceHorizontal = bounceScroll
+        containerView.bounces = true
+        containerView.alwaysBounceHorizontal = true
         containerView.alwaysBounceVertical = false
         containerView.scrollsToTop = false
         containerView.delegate = self
